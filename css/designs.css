@@ -67,10 +67,12 @@ body {
 }
 .txt {
   font-family: "Haunted Villa", sans-serif;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
 }
 .memory-title {
+  display: flex;
+  justify-content: center;
 }
 .title-input {
   font-family: "Haunted Villa", sans-serif;
@@ -78,4 +80,59 @@ body {
   justify-content: center;
   font-size: 40px;
   width: 100%;
+  border-radius: 10px;
+  border: solid 2px #000000;
+}
+.emoji {
+  font-family: "Haunted Villa", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+.emoji-button {
+  font-size: 30px;
+  padding: 10px;
+  border: solid 2px #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.emoji-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+.pic-txt {
+  font-family: "Haunted Villa", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+.photo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.add-icon {
+  padding: 0px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.preview-image {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 15px;
+
+  object-fit: cover;
+  cursor: pointer;
 }

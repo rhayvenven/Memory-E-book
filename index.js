@@ -5,7 +5,7 @@ const createWindow = () => {
     width: 500,
     height: 600,
   });
-  win.loadFile("new_memory.html");
+  win.loadFile("html/new_memory.html");
   win.setMenuBarVisibility(false);
 };
 app.whenReady().then(() => {
