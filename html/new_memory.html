@@ -18,6 +18,7 @@
     </button>
     <div class="main-text">Memory Book</div>
     <div class="date">
+      <h3>Today</h3>
       <h3><time id="current-date"></time></h3>
       <script>
         const dateElement = document.getElementById("current-date");
@@ -48,11 +49,34 @@
       <h3 class="pic-txt">Photos</h3>
       <div class="image-upload">
         <label for="imageInput">
-          <img class="add-icon" src="../images/add.png" alt="Add Photo" />
+          <img
+            id="add"
+            class="add-icon"
+            src="../images/add.png"
+            alt="Add Photo"
+          />
         </label>
-        <img id="preview" class="preview-image" hidden />
         <input type="file" id="imageInput" accept="image/*" hidden />
       </div>
+      <div class="gallery" id="gallery"></div>
+    </div>
+    <div class="memory-text">
+      <textarea
+        class="story-text"
+        id="story"
+        placeholder="Write your memory here..."
+      ></textarea>
+    </div>
+    <div class="tags">
+      <h3 class="tag-text">Tags</h3>
+      <button class="tag" onclick="selectTag('😊')">😊 Happy</button>
+      <button class="tag" onclick="selectTag('🌊')">🌊 Beach</button>
+      <button class="tag" onclick="selectTag('❤️')">❤️ Love</button>
+      <button class="tag" onclick="selectTag('👨‍👩‍👧')">👨‍👩‍👧 Family</button>
+      <button class="tag" onclick="selectTag('🎮')">🎮 Gaming</button>
+    </div>
+    <div class="save-memory">
+      <button class="main-btn">Save Memory</button>
     </div>
     <script src="../js/add-memory.js"></script>
   </body>
