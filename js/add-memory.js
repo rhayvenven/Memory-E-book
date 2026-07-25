@@ -10,3 +10,7 @@ imageInput.addEventListener("change", function () {
     gallery.appendChild(img);
   }
 });
+window.memoryAPI.saveMemory({
+  title: "First Memory",
+  story: "Testing IPC!",
+});
