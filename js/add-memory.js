@@ -10,7 +10,27 @@ imageInput.addEventListener("change", function () {
     gallery.appendChild(img);
   }
 });
-window.memoryAPI.saveMemory({
-  title: "First Memory",
-  story: "Testing IPC!",
+
+const saveButton = document.querySelector(".save-btn");
+saveButton.addEventListener("click", function () {
+  console.log("Save button clicked!");
+  const title = titleInput.value;
+  const story = storyInput.value;
+  console.log(title);
+  console.log(story);
+  const memory = {
+    title: title,
+    story: story,
+  };
+  window.memoryAPI.saveMemory(memory);
 });
+
+const titleInput = document.getElementById("memoryTitle");
+const storyInput = document.getElementById("story");
+
+async function testLoad() {
+  const memories = await window.memoryAPI.loadMemories();
+  console.log(memories);
+}
+
+testLoad();

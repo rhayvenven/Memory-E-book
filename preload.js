@@ -4,4 +4,7 @@ contextBridge.exposeInMainWorld("memoryAPI", {
   saveMemory(memory) {
     ipcRenderer.send("save-memory", memory);
   },
+  loadMemories() {
+    return ipcRenderer.invoke("load-memories");
+  },
 });

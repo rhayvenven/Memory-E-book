@@ -1,6 +1,8 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const fs = require("fs");
 
+const memoryFile = path.join(__dirname, "data", "memories.json");
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 500,
@@ -21,4 +23,17 @@ app.whenReady().then(() => {
 ipcMain.on("save-memory", (event, memory) => {
   console.log("Memory received!");
   console.log(memory);
+});
+
+ipcMain.handle("load-memories", function () {
+  if (!fs.existsSync(memoryFile)) {
+    return [];
+  }
+  const data = fs.readFileSync(memoryFile, "utf8");
+
+  if (!data) {
+    return [];
+  }
+
+  return JSON.parse(data);
 });
