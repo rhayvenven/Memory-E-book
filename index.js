@@ -12,7 +12,7 @@ const createWindow = () => {
       contextIsolation: true,
     },
   });
-  win.loadFile("html/new_memory.html");
+  win.loadFile("html/memories.html");
   win.webContents.openDevTools();
   win.setMenuBarVisibility(false);
 };
