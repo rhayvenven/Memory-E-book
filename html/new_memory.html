@@ -39,11 +39,21 @@
     <div class="emoji-mood">
       <h3 class="emoji">Mood</h3>
       <div class="emoji-container">
-        <button class="emoji-button" onclick="selectEmoji('😊')">😊</button>
-        <button class="emoji-button" onclick="selectEmoji('😢')">😢</button>
-        <button class="emoji-button" onclick="selectEmoji('😡')">😡</button>
-        <button class="emoji-button" onclick="selectEmoji('😱')">😱</button>
-        <button class="emoji-button" onclick="selectEmoji('😍')">😍</button>
+        <button class="emoji-button" onclick="selectEmoji('😊', this)">
+          😊
+        </button>
+        <button class="emoji-button" onclick="selectEmoji('😢', this)">
+          😢
+        </button>
+        <button class="emoji-button" onclick="selectEmoji('😡', this)">
+          😡
+        </button>
+        <button class="emoji-button" onclick="selectEmoji('😱', this)">
+          😱
+        </button>
+        <button class="emoji-button" onclick="selectEmoji('😍', this)">
+          😍
+        </button>
       </div>
     </div>
     <div class="photo">
@@ -57,7 +67,7 @@
             alt="Add Photo"
           />
         </label>
-        <input type="file" id="imageInput" accept="image/*" hidden />
+        <input type="file" id="imageInput" accept="image/*" hidden multiple />
       </div>
       <div class="gallery" id="gallery"></div>
     </div>
@@ -71,11 +81,11 @@
     <div class="tags">
       <h3 class="tag-text">Tags</h3>
       <div class="tag-container">
-        <button class="tag" onclick="selectTag('😊')">😊 Happy</button>
-        <button class="tag" onclick="selectTag('🌊')">🌊 Beach</button>
-        <button class="tag" onclick="selectTag('❤️')">❤️ Love</button>
-        <button class="tag" onclick="selectTag('👨‍👩‍👧')">👨‍👩‍👧 Family</button>
-        <button class="tag" onclick="selectTag('🎮')">🎮 Gaming</button>
+        <button class="tag" onclick="selectTag('😊', this)">😊 Happy</button>
+        <button class="tag" onclick="selectTag('🌊', this)">🌊 Beach</button>
+        <button class="tag" onclick="selectTag('❤️', this)">❤️ Love</button>
+        <button class="tag" onclick="selectTag('👨‍👩‍👧', this)">👨‍👩‍👧 Family</button>
+        <button class="tag" onclick="selectTag('🎮', this)">🎮 Gaming</button>
       </div>
     </div>
     <div class="save-memory">
