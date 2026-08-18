@@ -1,72 +1,22 @@
 [
   {
-    "title": "qwqwe",
-    "story": "qwe"
-  },
-  {
-    "title": "sad",
-    "story": "asd"
-  },
-  {
-    "title": "TESTING",
-    "story": "ANO THO ANOTH ANOTH ANOT HA NOATHOANTOAHT"
-  },
-  {
-    "title": "sadwsd",
-    "story": "sadas",
-    "images": [
-      {}
-    ]
-  },
-  {
-    "title": "test",
-    "story": "testest",
-    "images": [
-      {}
-    ]
-  },
-  {
-    "title": "asd",
+    "title": "sdadsa",
     "story": "asdasdas",
     "images": [
-      {}
-    ]
-  },
-  {
-    "title": "TESTING",
-    "story": "TESTING",
-    "images": []
-  },
-  {
-    "title": "eremn",
-    "story": "ere",
-    "images": [
       "C:\\Users\\Rhayven\\Documents\\Memory Book\\data\\images\\2x2.jpg"
-    ]
-  },
-  {
-    "title": "asdsadas",
-    "story": "asdasd",
-    "images": [
-      "C:\\Users\\Rhayven\\Documents\\Memory Book\\data\\images\\ID FRONT.jpg"
-    ]
-  },
-  {
-    "title": "asdsadsa",
-    "story": "sadasdasd",
-    "images": [],
-    "mood": "😢",
-    "tags": [],
-    "date": "2026-08-17T06:33:34.123Z"
-  },
-  {
-    "title": "asd",
-    "story": "asdasdasd",
-    "images": [
-      "C:\\Users\\Rhayven\\Documents\\Memory Book\\data\\images\\Grades_FINALS.jpg"
     ],
-    "mood": "😢",
+    "mood": "😊",
+    "tags": [
+      "🌊"
+    ],
+    "date": "2026-08-18T13:13:19.952Z"
+  },
+  {
+    "title": "asdasdas",
+    "story": "sadasdas",
+    "images": [],
+    "mood": "😊",
     "tags": [],
-    "date": "2026-08-17T09:52:43.332Z"
+    "date": "2026-08-18T13:13:35.007Z"
   }
 ]
