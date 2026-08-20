@@ -5,15 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/designs.css" />
+    <link rel="stylesheet" href="../css/designs.css" />
     <link href="https://fonts.cdnfonts.com/css/dasher" rel="stylesheet" />
     <link
       href="https://fonts.cdnfonts.com/css/haunted-villa"
       rel="stylesheet"
     />
+    <link href="https://fonts.cdnfonts.com/css/ankesans" rel="stylesheet" />
   </head>
   <body>
+    <button class="back-button" onclick="window.location.href = 'index.html'">
+      <img src="../images/back.png" alt="Back" />
+    </button>
     <div class="main-text">Memory Book</div>
-    <input class="main-search" type="search" placeholder="Search Memories" />
+
+    <div class="calendar-nav">
+      <button id="prevMonth" class="nav-arrow">‹</button>
+      <h2 id="monthLabel" class="month-label"></h2>
+      <button id="nextMonth" class="nav-arrow">›</button>
+    </div>
+
+    <div class="calendar-weekdays">
+      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span
+      ><span>Thu</span><span>Fri</span><span>Sat</span>
+    </div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+
+    <div class="day-memories" id="dayMemories"></div>
+
+    <script src="../js/calendar.js"></script>
   </body>
 </html>

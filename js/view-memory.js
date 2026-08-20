@@ -1,31 +1,49 @@
 const title = document.getElementById("memoryTitle");
 const story = document.getElementById("memoryStory");
-
-console.log(title);
-console.log(story);
+const moodEl = document.getElementById("memoryMood");
+const dateEl = document.getElementById("memoryDate");
+const tagsContainer = document.getElementById("memoryTags");
+const memoryImages = document.getElementById("memoryImages");
 
 const index = localStorage.getItem("selectedMemory");
-console.log(index);
 
 async function loadMemory() {
   const memories = await window.memoryAPI.loadMemories();
-  console.log(memories);
-
   const memory = memories[index];
-  console.log("Images:", memory.images);
+  console.log("Memory:", memory);
 
   title.textContent = memory.title;
   story.textContent = memory.story;
-  const memoryImages = document.getElementById("memoryImages");
-  console.log("Memory:", memory);
-  console.log("Images:", memory.images);
+  moodEl.textContent = memory.mood || "";
+  dateEl.textContent = memory.date
+    ? new Date(memory.date).toLocaleDateString()
+    : "";
 
-  for (const imagePath of memory.images) {
+  tagsContainer.innerHTML = "";
+  const tags = memory.tags || [];
+  for (const tag of tags) {
+    const span = document.createElement("span");
+    span.classList.add("tag");
+    span.textContent = tag;
+    tagsContainer.appendChild(span);
+  }
+
+  memoryImages.innerHTML = "";
+  const images = memory.images || [];
+  images.forEach(function (imagePath, i) {
+    if (typeof imagePath !== "string") {
+      return;
+    }
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("polaroid");
+    wrapper.classList.add(i % 2 === 0 ? "rotate-left" : "rotate-right");
+
     const img = document.createElement("img");
     img.src = window.memoryAPI.toFileUrl(imagePath);
-    img.classList.add("preview-image");
-    memoryImages.appendChild(img);
-  }
+    wrapper.appendChild(img);
+
+    memoryImages.appendChild(wrapper);
+  });
 }
 
 loadMemory();
