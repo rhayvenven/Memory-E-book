@@ -1,4 +1,4 @@
-Memory Book
+Memory E-Book
 
 A desktop diary app built with Electron. Save a memory with a photo, a story, a mood, and tags — then browse them by list, by filter, or by calendar.
 
