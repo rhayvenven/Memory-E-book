@@ -12,7 +12,7 @@ Features
 - View a memory in a polaroid-style detail page
 - Browse memories by date on a calendar
 
-Tech Stack
+Tech Stack:
 Electron, Node.js, HTML/CSS/JavaScript
 
 License
